@@ -44,9 +44,10 @@ function loderanimation() {
   tl.from("#nav", {
     opacity: 0,
   });
-  tl.from(".hero h1, #hero3 h2", {
-    y: 120,
+  tl.from(".hero h1, #hero3 h2, #hero3 h3 ", {
+    y: 140,
     stagger: 0.2,
+    delay: -0.5,
   });
 }
 function cursorAnimation() {

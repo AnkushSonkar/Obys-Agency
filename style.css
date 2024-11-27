@@ -10,11 +10,13 @@ html,
 body {
   height: 100%;
   width: 100%;
+  overflow: auto;
+  top: 0;
 }
 
-body::-webkit-scrollbar {
+/* body::-webkit-scrollbar {
   display: none;
-}
+} */
 
 #crsr {
   height: 2.2vw;
@@ -196,17 +198,58 @@ body::-webkit-scrollbar {
 }
 
 #hero3 h2 {
-  text-decoration: underline;
+  border-bottom: 0.6vw solid white;
+  padding-bottom: 0.4vw;
 }
 
 #hero3 h2:hover {
   -webkit-text-stroke: 1px white;
   color: transparent;
   font-weight: 100;
-  text-decoration: none;
+  border-bottom: 0.6vw solid rgba(255, 255, 255, 0);
 }
 
 #page2 {
   height: 100vh;
+  padding-top: 6vh;
   background-color: #151515;
+  position: relative;
+}
+
+#video-crsr {
+  height: 8.5vw;
+  width: 8.5vw;
+  border-radius: 50%;
+  background-color: #ffa63d;
+  position: absolute;
+  top: -10%;
+  left: 70%;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#video-crsr i {
+  font-size: 2vw;
+}
+
+#video-container {
+  height: 70vh;
+  width: calc(100% - 27%);
+  position: relative;
+  left: 27%;
+}
+#video-container img {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: calc(100% + 1px);
+  object-fit: cover;
+}
+
+#video-container video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
