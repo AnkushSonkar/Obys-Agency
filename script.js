@@ -41,7 +41,7 @@ function loderanimation() {
   tl.to("#loader", {
     display: "none",
   });
-  tl.from("#nav", {
+  tl.from("#nav, #hero1::before ", {
     opacity: 0,
   });
   tl.from(".hero h1, #hero3 h2, #hero3 h3 ", {

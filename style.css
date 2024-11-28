@@ -14,11 +14,11 @@ body {
   top: 0;
 }
 
-/* body::-webkit-scrollbar {
+body::-webkit-scrollbar {
   display: none;
-} */
+}
 
-/* #crsr {
+#crsr {
   height: 2.2vw;
   width: 2.2vw;
   border-radius: 50%;
@@ -27,7 +27,7 @@ body {
   z-index: 999;
   mix-blend-mode: difference;
   transform: translate(-50%, -50%);
-} */
+}
 
 #loader {
   height: calc(100vh + 1px);
@@ -42,7 +42,6 @@ body {
   justify-content: center;
   background-color: #000000;
   z-index: 99;
-
   /* display: none; */
 }
 
@@ -175,10 +174,11 @@ body {
 }
 
 .hero {
-  width: 72%;
-  margin-left: 27%;
+  width: max-content;
+  padding-left: 10%;
+  margin-left: 17%;
   height: fit-content;
-  overflow: hidden;
+  overflow-y: hidden;
   display: flex;
   align-items: center;
   position: relative;
@@ -187,6 +187,19 @@ body {
 
 .hero:nth-child(2) {
   margin-top: 8vh;
+}
+#hero1 {
+  position: relative;
+}
+
+#hero1::before {
+  content: "01";
+  font-size: 3.2vw;
+  font-weight: 100;
+  position: absolute;
+  top: 0;
+  left: 4%;
+  font-family: "silk serif";
 }
 
 .hero h1,
@@ -277,14 +290,25 @@ body {
 #page4-content h1 {
   font-size: 7.3vw;
   text-transform: uppercase;
+  position: relative;
 }
 
-#underline {
+#page4-content h1::before {
+  content: "03";
+  font-size: 3.2vw;
+  font-weight: 100;
+  position: absolute;
+  top: 10%;
+  left: -12%;
+  font-family: "silk serif";
+}
+
+.underline {
   height: 2px;
-  width: 100%;
-  margin: 5vw 0;
+  width: 95%;
+  margin: 4.5vw 0;
   border-radius: 10px;
-  background-color: #575757;
+  background-color: #b6b6b6;
 }
 
 #page4-content > p {
@@ -339,4 +363,104 @@ body {
   height: 100vh;
   width: 100%;
   background-color: #151515;
+  position: relative;
+}
+
+.elem,
+.elem2 {
+  white-space: nowrap;
+  overflow-x: hidden;
+  margin-bottom: -2.5vw;
+}
+
+.elem h1 {
+  font-size: 7vw;
+  -webkit-text-stroke: 1px #fff;
+  font-weight: 400;
+  color: transparent;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-right: 16px;
+  animation: anime-marque 20s linear infinite;
+}
+
+@keyframes anime-marque {
+  from {
+    transform: translate(0);
+  }
+  to {
+    transform: translate(calc(-100% - 19.5px));
+  }
+}
+
+.elem2 h1 {
+  font-size: 7vw;
+  -webkit-text-stroke: 1px #fff;
+  font-weight: 400;
+  color: transparent;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-right: 15px;
+  animation: anime-marque 20s linear infinite reverse;
+}
+
+.elem h1 span,
+.elem2 h1 span {
+  font-style: italic;
+  font-family: "silk serif";
+  color: transparent;
+}
+#footer {
+  height: min-content;
+  width: calc(100% - 27%);
+  position: relative;
+  left: 27%;
+  padding-bottom: 2.5vw;
+}
+
+#footer h1 {
+  font-size: 7.3vw;
+  text-transform: uppercase;
+  position: relative;
+}
+
+#footer h1::before {
+  content: "04";
+  font-size: 3.2vw;
+  font-weight: 100;
+  position: absolute;
+  top: 10%;
+  left: -12%;
+  font-family: "silk serif";
+}
+
+#footer-div {
+  display: flex;
+  align-items: flex-start;
+  padding: 0 2vw 0 0;
+  margin-bottom: 3vw;
+}
+
+.box {
+  width: 50%;
+  padding: 0 0 2vw 0;
+}
+
+.box h6 {
+  font-size: 0.9vw;
+  font-weight: 500;
+  margin-bottom: 1.5vw;
+  text-transform: capitalize;
+}
+
+.box h5 {
+  font-size: 1.5vw;
+  font-weight: 500;
+  line-height: 1;
+}
+
+#footer-copyright h5 {
+  font-size: 0.85vw;
+  margin-top: -1.7vw;
+  font-weight: 500;
 }
