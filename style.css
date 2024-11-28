@@ -12,6 +12,7 @@ body {
   width: 100%;
   overflow: auto;
   top: 0;
+  user-select: none;
 }
 
 body::-webkit-scrollbar {
