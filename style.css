@@ -13,6 +13,7 @@ body {
   overflow: auto;
   top: 0;
   user-select: none;
+  /* cursor: none !important; */
 }
 
 body::-webkit-scrollbar {
@@ -38,7 +39,7 @@ body::-webkit-scrollbar {
   flex-direction: column;
   justify-content: center;
   background-color: #000000;
-  z-index: 99;
+  z-index: 9999;
 }
 
 .line {
@@ -128,8 +129,8 @@ body::-webkit-scrollbar {
   min-height: 100vh;
   width: 100%;
   background-color: #151515;
-  /* margin-bottom: 10vh; */
-  padding-bottom: 13vh;
+  margin-bottom: 20vh;
+  padding-bottom: 5vh;
   position: relative;
 }
 
@@ -173,9 +174,9 @@ body::-webkit-scrollbar {
 }
 
 .hero {
-  width: 72%;
-  padding-left: 10%;
-  margin-left: 17%;
+  width: fit-content;
+  /* padding-left: 10%; */
+  margin-left: 27%;
   height: fit-content;
   overflow-y: hidden;
   display: flex;
@@ -186,6 +187,8 @@ body::-webkit-scrollbar {
 
 .hero:nth-child(2) {
   margin-top: 8vh;
+  padding-left: 9%;
+  margin-left: 18%;
 }
 #hero1 {
   position: relative;
@@ -224,9 +227,10 @@ body::-webkit-scrollbar {
 #page2 {
   min-height: 100vh;
   width: 100%;
-  padding: 20vh 0;
+  padding: 15vh 0;
   margin-bottom: 30vh;
   position: relative;
+  background-color: #151515;
 }
 
 #video-crsr {
@@ -270,6 +274,7 @@ body::-webkit-scrollbar {
   position: relative;
   padding: 17vh 2vw;
   margin-bottom: 15vh;
+  background-color: #151515;
   /* margin-top: 25vh; */
 }
 
@@ -286,7 +291,7 @@ body::-webkit-scrollbar {
 }
 
 #page3-content h1::before {
-  content: "03";
+  content: "02";
   font-size: 3.2vw;
   font-weight: 100;
   position: absolute;
@@ -329,7 +334,7 @@ body::-webkit-scrollbar {
   width: 22vw;
 }
 #image-div-container2 > .image-div:nth-child(2) {
-  margin-top: 20vh;
+  margin-top: 20vw;
 }
 
 .page3-circle1,
@@ -337,7 +342,7 @@ body::-webkit-scrollbar {
   height: 20vw;
   width: 20vw;
   border-radius: 50%;
-  margin: 30vh 0 0 25vh;
+  margin: 20vw 0 0 10vw;
   border: 1px solid #fff;
   display: flex;
   align-items: center;
@@ -356,7 +361,7 @@ body::-webkit-scrollbar {
 }
 
 .page3-circle2 {
-  margin: 0 13.5vh 0 0;
+  margin: 0 10vw 0 0;
 }
 
 .circle-in {
@@ -544,6 +549,7 @@ body::-webkit-scrollbar {
   position: relative;
   left: 27%;
   padding-bottom: 2.5vw;
+  background-color: #151515;
 }
 
 #footer h1 {
@@ -596,4 +602,13 @@ body::-webkit-scrollbar {
 ._canvas_container {
   z-index: 999999 !important;
   pointer-events: none;
+}
+
+#flag {
+  height: 25vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  opacity: 0;
 }

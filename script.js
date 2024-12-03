@@ -79,9 +79,6 @@ function loderanimation() {
   tl.to("#loader", {
     display: "none",
   });
-  tl.from("#nav", {
-    opacity: 0,
-  });
   tl.from("#hero1", {
     opacity: 0,
   });
@@ -97,7 +94,7 @@ function cursorAnimation() {
     ease: "cubic-bezier(0.23, 1, 0.320, 1)",
     duration: 0.5,
   });
-  Shery.makeMagnet("#nav-topright li");
+  // Shery.makeMagnet("#nav-topright li");
 
   var videoContainer = document.querySelector("#video-container");
   var video = document.querySelector("#video-container video");
@@ -114,7 +111,6 @@ function cursorAnimation() {
     });
   });
   videoContainer.addEventListener("mouseleave", function () {
-    // alert("Please");
     gsap.to(".mousefollower", {
       opacity: 1,
     });
@@ -187,7 +183,34 @@ function sheryAnimation() {
   });
 }
 
+function flagAnimation() {
+  document.addEventListener("mousemove", function (dets) {
+    gsap.to("#flag", {
+      x: dets.x,
+      y: dets.y,
+    });
+  });
+
+  document.querySelector("#hero3").addEventListener("mouseenter", function () {
+    gsap.to("#flag", {
+      opacity: 1,
+    });
+    gsap.to(".mousefollower", {
+      opacity: 0,
+    });
+  });
+  document.querySelector("#hero3").addEventListener("mouseleave", function () {
+    gsap.to("#flag", {
+      opacity: 0,
+    });
+    gsap.to(".mousefollower", {
+      opacity: 1,
+    });
+  });
+}
+
 loderanimation();
 cursorAnimation();
 locomotiveAnimation();
 sheryAnimation();
+flagAnimation();
