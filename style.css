@@ -543,6 +543,7 @@ body::-webkit-scrollbar {
   font-family: "silk serif";
   color: transparent;
 }
+
 #footer {
   height: min-content;
   width: calc(100% - 27%);
@@ -611,4 +612,283 @@ body::-webkit-scrollbar {
   left: 0;
   transform: translate(-50%, -50%);
   opacity: 0;
+}
+
+@media (max-width: 600px) {
+  #loader {
+    padding: 10vh 5vw;
+  }
+
+  #page1 {
+    min-height: 55vh;
+    width: 100%;
+    background-color: #151515;
+    margin-bottom: 0;
+    padding-bottom: 5vh;
+    position: relative;
+    padding-top: 1px;
+  }
+
+  #navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 5.5vw;
+    min-width: 100%;
+    margin: 0;
+    position: fixed;
+    top: 0;
+  }
+
+  #navbar svg {
+    scale: 0.8;
+  }
+
+  #nav-middle,
+  #nav-topright {
+    display: none;
+  }
+
+  .hero {
+    margin-left: 5%;
+  }
+
+  .hero:nth-child(2) {
+    margin-top: 20vh;
+    padding-left: 0%;
+    margin-left: 5%;
+  }
+  #hero1 {
+    position: static;
+  }
+
+  #hero1::before {
+    font-size: 5vw;
+    font-weight: 500;
+    position: absolute;
+    top: 28.5%;
+    left: 5%;
+  }
+
+  .hero h1,
+  #hero3 h2,
+  #hero3 h3 {
+    font-weight: 600;
+    font-size: 10vw;
+    line-height: 10vw;
+    text-transform: uppercase;
+  }
+
+  #hero3 h2 {
+    border-bottom: 1vw solid white;
+    padding-bottom: 0.6vw;
+  }
+
+  #page2 {
+    min-height: 60vh;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 0;
+  }
+
+  #video-crsr {
+    height: 17vw;
+    width: 17vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  #video-crsr i {
+    font-size: 6vw;
+  }
+
+  #video-container {
+    height: 50vh;
+    width: 100%;
+    position: relative;
+    left: 0;
+  }
+
+  #page3 {
+    padding: 5vh 2vw;
+    margin-bottom: 0;
+  }
+
+  #page3-content {
+    width: calc(100% - 5%);
+    left: 5%;
+  }
+  #page3-content h1 {
+    position: static;
+    font-size: 10vw;
+  }
+  #page3-content h1::before {
+    font-size: 5vw;
+    font-weight: 500;
+    position: absolute;
+    top: -50%;
+    left: 0;
+  }
+
+  #image-div-container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: 10vh;
+  }
+
+  #image-div-container1,
+  #image-div-container2 {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .image-div {
+    height: 50vh;
+    width: 90vw;
+  }
+
+  .image-div:nth-child(1) {
+    height: 50vh;
+    width: 90vw;
+  }
+  #image-div-container2 > .image-div:nth-child(2) {
+    margin-top: 0;
+  }
+
+  .page3-circle1,
+  .page3-circle2 {
+    display: none;
+  }
+
+  #page4 {
+    min-height: 100vh;
+    width: 100%;
+    padding: 5vh 5vw 3vh 0;
+    /* margin-top: 37vh; */
+    background-color: #151515;
+    position: relative;
+  }
+
+  #page4-content {
+    width: calc(100% - 5%);
+    left: 5%;
+  }
+  #page4-content h1 {
+    position: static;
+    font-size: 10vw;
+  }
+  #page4-content h1::before {
+    font-size: 5vw;
+    font-weight: 500;
+    position: absolute;
+    top: -3%;
+    left: 0;
+  }
+
+  .underline4 {
+    width: 100%;
+  }
+  #page4-content > p {
+    font-size: 5vw;
+    width: 100%;
+    padding: 1vw 5vw 1vw 0;
+    margin-bottom: 3vw;
+  }
+
+  #page4-flex {
+    flex-direction: column;
+  }
+
+  #page4-flex img {
+    width: 100%;
+  }
+
+  #page4-flex p {
+    width: 100%;
+    font-size: 3vw;
+  }
+
+  #page4-blue-div {
+    width: 100%;
+    padding: 8vw 4vw;
+    position: static;
+    margin: 2vh 0 7.5vh 0;
+  }
+
+  .blue-div-elem {
+    padding: 2.5vw 0;
+    border-bottom: 1.5px solid #ffffff94;
+  }
+
+  .blue-div-elem h4 {
+    font-size: 3vw;
+    font-weight: 300;
+  }
+
+  .blue-div-elem p {
+    width: 40%;
+    font-size: 1.6vw;
+  }
+
+  #page5 {
+    height: fit-content;
+  }
+
+  .elem h1,
+  .elem2 h1 {
+    font-size: 12vw;
+  }
+
+  #footer {
+    /* height: min-content; */
+    width: calc(100% - 5%);
+    position: relative;
+    left: 5%;
+    padding: 7vh 0 5vh 0;
+  }
+
+  #footer h1 {
+    position: static;
+    font-size: 10vw;
+  }
+  #footer h1::before {
+    font-size: 5vw;
+    font-weight: 500;
+    position: absolute;
+    top: 5%;
+    left: 0;
+  }
+
+  #footer-div {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 0 2vw 0 0;
+    margin-bottom: 0vw;
+  }
+
+  .box {
+    width: 100%;
+    padding: 0 0 2vw 0;
+    margin-bottom: 3.5vw;
+  }
+
+  .box h6 {
+    font-size: 2.8vw;
+    margin-bottom: 2.5vw;
+  }
+
+  .box h5 {
+    font-size: 3.6vw;
+    line-height: 1;
+  }
+
+  #footer-copyright h5 {
+    font-size: 2.5vw;
+    margin-top: 2.5vh;
+  }
 }
