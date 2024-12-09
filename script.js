@@ -87,6 +87,15 @@ function loderanimation() {
     stagger: 0.2,
     delay: -0.5,
   });
+  if (window.matchMedia("(max-width: 786px)").matches) {
+    tl.from("#page2 ", {
+      opacity: 0,
+      x: 600,
+      scale: 0.5,
+      duration: 1,
+      ease: Power4,
+    });
+  }
 }
 function cursorAnimation() {
   Shery.mouseFollower({
@@ -114,10 +123,17 @@ function cursorAnimation() {
     gsap.to(".mousefollower", {
       opacity: 1,
     });
-    gsap.to("#video-crsr", {
-      left: "70%",
-      top: "-10%",
-    });
+    if (window.matchMedia("(max-width: 786px)").matches) {
+      gsap.to("#video-crsr", {
+        left: "50%",
+        top: "50%",
+      });
+    } else {
+      gsap.to("#video-crsr", {
+        left: "70%",
+        top: "-10%",
+      });
+    }
   });
   var flag = 0;
   video.addEventListener("click", function () {
