@@ -615,6 +615,10 @@ body::-webkit-scrollbar {
 }
 
 @media (max-width: 600px) {
+  body {
+    cursor: pointer !important;
+  }
+
   #loader {
     padding: 10vh 5vw;
   }
